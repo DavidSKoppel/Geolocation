@@ -13,8 +13,8 @@ namespace Geolocation
         {
             InitializeComponent();
 
+            MainPage = new MainPage();
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
         }
 
         protected override void OnStart()
