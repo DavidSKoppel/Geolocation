@@ -1,6 +1,4 @@
-﻿using Geolocation.Services;
-using Geolocation.Views;
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +12,6 @@ namespace Geolocation
             InitializeComponent();
 
             MainPage = new MainPage();
-            DependencyService.Register<MockDataStore>();
         }
 
         protected override void OnStart()

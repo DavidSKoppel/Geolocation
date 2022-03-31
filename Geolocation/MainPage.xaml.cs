@@ -10,17 +10,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
-namespace Geolocation.Views
+namespace Geolocation
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            double zoomLevel = 17;
-            double latlongDegrees = 360 / (Math.Pow(2, zoomLevel));
-            Position position = new Position(27, 21);
-            map.MoveToRegion(new MapSpan(position, latlongDegrees, latlongDegrees));
         }
 
         bool firstTime = true;

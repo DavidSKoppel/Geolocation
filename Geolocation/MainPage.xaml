@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Geolocation.MainPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" 
+             Title="{Binding Title}">
+    <Grid RowDefinitions="*,20,*,20,30" ColumnDefinitions="*,20,*" BackgroundColor="#581FD6">
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Map App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <maps:Map x:Name="map" Grid.ColumnSpan="3" Grid.RowSpan="3" PropertyChanged="map_PropertyChanged" MapType="Hybrid" IsShowingUser="True"/>
+            <Ellipse x:Name="geoPosition" Stroke="red" Grid.Row="1" Grid.Column="1"  StrokeThickness="2" WidthRequest="12"/>
+        <Rectangle Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3" Fill="#dFdFdF"  RadiusX="50" RadiusY="50"></Rectangle>
+        <Label Grid.Row="3" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span TextColor="#581FD6" FontSize="16" FontAttributes="Bold" Text="Latitude: " />
+                    <Span TextColor="#581FD6" x:Name="geoLatitude"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="4" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span TextColor="#581FD6" FontSize="16" FontAttributes="Bold" Text="Longitude: " />
+                    <Span TextColor="#581FD6" x:Name="geoLongitude"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </Grid>
+</ContentPage>
